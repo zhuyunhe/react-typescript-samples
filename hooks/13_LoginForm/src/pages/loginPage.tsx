@@ -22,7 +22,6 @@ const useStyles = makeStyles(theme =>
 );
 
 interface Props extends RouteComponentProps {}
-
 const LoginPageInner = (props: Props) => {
   const [loginInfo, setLoginInfo] = React.useState<LoginEntity>(
     createEmptyLogin()
@@ -66,7 +65,7 @@ const LoginPageInner = (props: Props) => {
   );
 };
 
-export const LoginPage = withRouter<Props>(LoginPageInner);
+export const LoginPage = withRouter<Props, React.ComponentType<Props>>(LoginPageInner);
 
 interface PropsForm {
   onLogin: () => void;

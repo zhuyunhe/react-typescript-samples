@@ -312,3 +312,21 @@ We are an innovating team of Javascript experts, passionate about turning your i
 [Lemoncode](http://lemoncode.net/services/en/#en-home) provides training services.
 
 For the LATAM/Spanish audience we are running an Online Front End Master degree, more info: http://lemoncode.net/master-frontend
+
+
+# TS知识点 
+## 泛型  
+提供有意义的约束，比如下面这个函数里提供了函数参数和函数返回值的约束。
+```
+function reverse<T>(items: T[]): T[] {
+  const toreturn = [];
+  for (let i = items.length - 1; i >= 0; i--) {
+    toreturn.push(items[i]);
+  }
+  return toreturn;
+}
+
+const sample = [1, 2, 3];
+let reversed = reverse(sample);
+reversed[1] = '2' //error: Type '"2"' is not assignable to type 'number'.
+```

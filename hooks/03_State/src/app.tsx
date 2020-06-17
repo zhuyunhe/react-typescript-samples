@@ -2,7 +2,7 @@ import * as React from "react";
 import { HelloComponent } from "./hello";
 import { NameEditComponent } from "./nameEdit";
 
-export const App = () => {
+export const App: React.FC = () => {
   const [name, setName] = React.useState("initialName");
 
   const setUsernameState = (event: React.ChangeEvent<HTMLInputElement>) => {

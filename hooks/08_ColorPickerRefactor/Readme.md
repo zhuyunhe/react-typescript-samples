@@ -258,3 +258,21 @@ We are an innovating team of Javascript experts, passionate about turning your i
 
 For the LATAM/Spanish audience we are running an Online Front End Master degree, more info: http://lemoncode.net/master-frontend
 
+
+# 涉及TS知识点
+
+## keyof  
+> keyof 操作符能让你捕获一个类型的键。例如，你可以使用它来捕获变量的键名称，在通过使用 typeof 来获取类型之后，你可以很容易地拥有像字符串枚举+常量这样的类型。
+
+ ```
+ interface colors  {
+  red: number;
+  green: number;
+  blue: number;
+};
+
+type Colors = keyof colors;
+let color: Colors; // color 的类型是 'red' | 'blue'
+color = 'red'
+ ```
+

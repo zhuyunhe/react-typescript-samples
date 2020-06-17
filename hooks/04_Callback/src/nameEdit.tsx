@@ -12,7 +12,7 @@ export const NameEditComponent = (props: Props) => {
     setEditingName(e.target.value);
   };
 
-  const onNameSubmit = (event: any): any => {
+  const onNameSubmit = (event: React.MouseEvent): any => {
     props.onNameUpdated(editingName);
   };
 
